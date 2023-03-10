@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      AC 1 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-list>
+
+      <ion-radio-group [(ngModel)]="genêro"> 
+    
+        <ion-item>
+          <ion-label>Mulher</ion-label>
+          <ion-radio slot="end" value="mulher"></ion-radio>
+        </ion-item>
+        <ion-item>
+
+          <ion-label>Homem</ion-label>
+          <ion-radio slot="end" value="homem"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+
+    <ion-item>
+      <ion-label position="floating">Digite sua altura :</ion-label>
+      <ion-input [(ngModel)]= "altura" type="number"></ion-input>
+    </ion-item>
+
+    <ion-label>{{resultado}}</ion-label>
+    
+    <ion-button expand="block" (click)="calcular()">Calcular</ion-button> 
+
+    <ion-item>
+      <ion-label position="floating">Digite o valor da compra :</ion-label>
+      <ion-input [(ngModel)]= "compra" type="number"></ion-input>
+    </ion-item>
+
+    <ion-list>
+      <ion-radio-group [(ngModel)]= "radioSelecionada">
+        <ion-item>
+          <ion-label>Pix</ion-label>
+          <ion-radio slot="end" value="pix"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Débito</ion-label>
+          <ion-radio slot="end" value="debito"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Crédito</ion-label>
+          <ion-radio slot="end" value="credito"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  <ion-button expand="block" (click)="verificar()">Verificar</ion-button>
+</ion-content>
+
+
+
